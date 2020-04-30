@@ -8,8 +8,8 @@ public class AccuracyDoubleFloat {
         double r = 6371.2;
         double b = 3;
         double c = Math.pow(r,b);
-        double v = 4/(3*pi)*c;
-       //System.out.println("Объем Земли double = "+v);
+        double v = c*pi*4/3;
+        //System.out.println("Объем Земли double = "+v);
         return v;
      }
 
@@ -17,13 +17,13 @@ public class AccuracyDoubleFloat {
         float pi = 3.14f;
         float r = 6371.2f;
         float b = 3f;
-        float v = 4 / (3 * pi)*( r * r * r );
-        //System.out.println("Объем Земли float = "+v);
+        float v = (r * r * r) * pi * 4 / 3;
+         //System.out.println("Объем Земли float = "+v);
         return v;
     }
 
     public static double calculateAccuracy(double radius) {
-    double dif = volumeBallDouble(6371.2)-(double)volumeBallFloat(6371.2f);
+       double dif = (double)volumeBallFloat(6371.2f)- volumeBallDouble(6371.2);
         //System.out.println("Разница double и float в объеме Земли "+dif);
     return dif;
 

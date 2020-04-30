@@ -7,26 +7,26 @@ public class Astronomy {
         return s;
     }
     public static Double earthSquare(double r){
-       // System.out.println("Площадь поверхности Земли " +sphereSquare(6371.2));
+       System.out.println("Площадь поверхности Земли " +sphereSquare(6371.2));
         return sphereSquare(6371.2);
 
     }
     public static Double mercurySquare(double r){
-      // System.out.println("Площадь поверхности Меркурия "+sphereSquare(2439.7));
+      System.out.println("Площадь поверхности Меркурия "+sphereSquare(2439.7));
         return sphereSquare(2439.7);
     }
     public static Double jupiterSquare(double r){
-        //System.out.println("Площадь поверхности Юпитера "+sphereSquare(71492));
+        System.out.println("Площадь поверхности Юпитера "+sphereSquare(71492));
         return sphereSquare(71492);
     }
     public static Double earthVsMercury(double a){
         a = earthSquare (6371.2)/mercurySquare(2439.7);
-       // System.out.println( "Отношение площади Земли к площади Меркурия "+a);
+       System.out.println( "Отношение площади Земли к площади Меркурия "+a);
         return a;
     }
     public static Double earthVsJupiter(double a){
         a = earthSquare (6371.2)/jupiterSquare (71492);
-       // System.out.println( "Отношение площади Земли к площади Юпитера "+a);
+       System.out.println( "Отношение площади Земли к площади Юпитера "+a);
         return a;
     }
 
