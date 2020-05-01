@@ -23,16 +23,14 @@ public class AccuracyDoubleFloat {
     }
 
     public static double calculateAccuracy(double radius) {
-        double vd = volumeBallDouble(6371.2);
-        double vf = volumeBallFloat(6371.2f);
-        //double dif = vd - vf;
+        float vd = (float)volumeBallDouble(6371.2f);
+        float vf = volumeBallFloat(6371.2f);
+        float dif = vd - vf;
 
-        double dif;
+        //double dif;
        // dif = volumeBallDouble(6371.2)-(double)volumeBallFloat(6371.2f);
-        dif = Math.abs(vd-vf);
+        //dif = Math.abs(vd-vf);
         System.out.println("Разница double и float в объеме Земли "+dif);
-
-
         return dif;
 
     }
@@ -40,7 +38,7 @@ public class AccuracyDoubleFloat {
     public static void main(String[] args) {
       ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.volumeBallDouble(6371.2);
       ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.volumeBallFloat(6371.2f);
-      ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.calculateAccuracy(6371.2);
+      ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.calculateAccuracy(6371.2f);
 
     }
 
