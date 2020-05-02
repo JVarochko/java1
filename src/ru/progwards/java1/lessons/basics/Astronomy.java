@@ -7,34 +7,36 @@ public class Astronomy {
         return s;
     }
     public static Double earthSquare(double r){
-        double pi = 3.14;
+       r =6371.2;
+       double pi = 3.14;
        double s = 4 * pi * (r * r);
        System.out.println("Площадь поверхности Земли " +sphereSquare(6371.2));
         return sphereSquare(6371.2);
 
     }
     public static Double mercurySquare(double r){
+        r = 2439.7;
         double pi = 3.14;
         double s = 4 * pi * (r * r);
       System.out.println("Площадь поверхности Меркурия "+sphereSquare(2439.7));
         return sphereSquare(2439.7);
     }
     public static Double jupiterSquare(double r){
+        r = 71492;
         double pi = 3.14;
         double s = 4 * pi * (r * r);
         System.out.println("Площадь поверхности Юпитера "+sphereSquare(71492));
         return sphereSquare(71492);
     }
-    public static Double earthVsMercury(double v){
-
-        double df = earthSquare (6371.2)/mercurySquare(2439.7);
-       System.out.println( "Отношение площади Земли к площади Меркурия "+df);
-        return df;
+    public static Double earthVsMercury(double dfm){
+        dfm = earthSquare(6371.2)/mercurySquare(2439.7);
+       System.out.println( "Отношение площади Земли к площади Меркурия "+dfm);
+        return dfm;
     }
-    public static Double earthVsJupiter(double v){
-        double df = earthSquare (6371.2)/jupiterSquare (71492);
-       System.out.println( "Отношение площади Земли к площади Юпитера "+df);
-        return df;
+    public static Double earthVsJupiter(double dfj){
+        dfj = earthSquare (6371.2)/jupiterSquare (71492);
+       System.out.println( "Отношение площади Земли к площади Юпитера "+dfj);
+        return dfj;
     }
 
     public static void main(String[] args) {
