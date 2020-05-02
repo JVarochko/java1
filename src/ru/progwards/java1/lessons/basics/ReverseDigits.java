@@ -2,13 +2,16 @@ package ru.progwards.java1.lessons.basics;
 
 public class ReverseDigits {
 
-    public static void reverseDigits(int number){
+    public static int reverseDigits(int number){
         int num = 123;
-        int a = num % 10;
-        int b = (num % 100) / 10;
-        int c = (num - num % 10) / 100;
-        String str = "";
+        Integer a = num % 10;
+        Integer b = (num % 100) / 10;
+        Integer c = (num - num % 10) / 100;
+        String s;
+        s =a.toString()+b.toString()+c.toString();
+        Integer d = Integer.parseInt(s);
         System.out.println(a+""+b+""+c);
+        return d;
          }
     public static void main(String[] args) {
         ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits(123);
