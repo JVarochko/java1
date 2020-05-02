@@ -3,7 +3,7 @@ package ru.progwards.java1.lessons.basics;
 public class ReverseDigits {
 
     public static int reverseDigits(int number){
-        int num = 828;
+        int num = 444;
         Integer a = num % 10;
         //System.out.println(a);
         Integer b = (num % 100) / 10;
