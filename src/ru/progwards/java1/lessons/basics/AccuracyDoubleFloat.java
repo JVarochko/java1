@@ -28,7 +28,8 @@ public class AccuracyDoubleFloat {
         double vd = volumeBallDouble(radius);
         double vf = (double) volumeBallFloat((float)radius);
         double dif = vd - vf;
-        System.out.println( vd - vf);
+        System.out.println(vd+"-"+vf+"="+dif);
+
         System.out.println( dif );
         System.out.println("Разница double и float в объеме Земли "+dif);
         return dif;

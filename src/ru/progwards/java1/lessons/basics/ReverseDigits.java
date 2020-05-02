@@ -1,26 +1,73 @@
 package ru.progwards.java1.lessons.basics;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class ReverseDigits {
 
     public static int reverseDigits(int number){
-        int num = 444;
-        Integer a = num % 10;
-        //System.out.println(a);
-        Integer b = (num % 100) / 10;
-        //System.out.println(b);
-        Integer c = (num - num % 10) / 100;
-        //System.out.println(c);
+        int num = 123;
+        int a = num % 10;
+        System.out.println(a);
+        int b = (num % 100) / 10;
+        System.out.println(b);
+        int c = (num - num % 10) / 100;
+        System.out.println(c);
         String s;
-        s = a.toString()+b.toString()+c.toString();
-        Integer d = Integer.parseInt(s);
-        System.out.println(s);
-        return d;
-         }
+        //int d =
+        //s = a.()+b.toString()+c.toString();
+        //int d = Integer.parseInt(s);
+        //System.out.println(s);
+       // return d;
+        return (num);
+    }
     public static void main(String[] args) {
-        ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits( 123);
+        ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits(123);
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //public static int reverseDigits(int number){
+      //  int num = 123;
+      //  Integer a = num % 10;
+        ////System.out.println(a);
+        //Integer b = (num % 100) / 10;
+        //System.out.println(b);
+       // Integer c = (num - num % 10) / 100;
+       // //System.out.println(c);
+       // String s;
+       // s = a.toString()+b.toString()+c.toString();
+       // Integer d = Integer.parseInt(s);
+       // System.out.println(s);
+       // return d;
+       //  }
+    //public static void main(String[] args) {
+     //   ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits(123);
+
+    //}
+//}
+
+
+
+
+
+
+
+
 
 
 
