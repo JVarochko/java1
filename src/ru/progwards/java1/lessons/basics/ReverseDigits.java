@@ -1,27 +1,46 @@
 package ru.progwards.java1.lessons.basics;
 
-class reverseDigits{
-    public static int reverseDigits(int number) {
-        //int reverseDigits = 123;
-        //int reverseDigits1 = 1;
-        //int reverseDigits2= 2;
-        //int reverseDigits3 = 3;
-        //System.out.println(reverseDigits3+""+reverseDigits2+""+reverseDigits1);
-        //return reverseDigits;
-        //int number = 123;
-        if (number < 1) {
-            return 0;
-        }
-        int temp = number % 10;
-        number = (number)/10;
-        System.out.println(temp);
-        return reverseDigits(number);
-    }
-     public static void main (String[]args){
-        ru.progwards.java1.lessons.basics.reverseDigits.reverseDigits(123);
+public class ReverseDigits {
 
-        }
-      }
+
+    public static void main(String[] args) {
+        int num = 123;
+        int a = num % 10;
+        int b = (num % 100) / 10;
+        int c = (num - num % 10) / 100;
+        String str = "";
+        System.out.println(a+""+b+""+c);
+    }
+}
+
+
+
+
+       // int num = 123;
+        //String str = "";
+       // for (int i = 1; i<3; i++) {
+          //  System.out.println(num % 10);
+            //num /= 10;
+            //System.out.println(num % 121);
+            //num/= 10;
+       // }
+   // }
+//}
+
+    //public static int reverseDigits(int number) {
+
+        //int num = 123;
+       // String str = "";
+       // for (int i = 0; i < 3; i++) {
+        //    System.out.println(num % 10);
+        //    num /= 10;
+       // }
+
+
+       // public static void main (String[] args){
+        //    ru.progwards.java1.lessons.basics.reverseDigits.reverseDigits(123);
+        //    System.out.println(reverseDigits(123));
+
 
 
 

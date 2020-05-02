@@ -1,7 +1,7 @@
 package ru.progwards.java1.lessons.basics;
 
 public class Astronomy {
-    public static Double sphereSquare ( double r){
+    public static Double sphereSquare (double r ){
         double pi = 3.14;
         double s = 4 * pi * (r * r);
         return s;
@@ -25,13 +25,13 @@ public class Astronomy {
         System.out.println("Площадь поверхности Юпитера "+sphereSquare(71492));
         return sphereSquare(71492);
     }
-    public static Double earthVsMercury(double a){
+    public static Double earthVsMercury(double v){
 
         double df = earthSquare (6371.2)/mercurySquare(2439.7);
        System.out.println( "Отношение площади Земли к площади Меркурия "+df);
         return df;
     }
-    public static Double earthVsJupiter(double a){
+    public static Double earthVsJupiter(double v){
         double df = earthSquare (6371.2)/jupiterSquare (71492);
        System.out.println( "Отношение площади Земли к площади Юпитера "+df);
         return df;
