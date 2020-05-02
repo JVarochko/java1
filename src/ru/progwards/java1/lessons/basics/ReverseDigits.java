@@ -3,18 +3,21 @@ package ru.progwards.java1.lessons.basics;
 public class ReverseDigits {
 
     public static int reverseDigits(int number){
-        int num = 123;
+        int num = 828;
         Integer a = num % 10;
+        //System.out.println(a);
         Integer b = (num % 100) / 10;
+        //System.out.println(b);
         Integer c = (num - num % 10) / 100;
+        //System.out.println(c);
         String s;
-        s =a.toString()+b.toString()+c.toString();
+        s = a.toString()+b.toString()+c.toString();
         Integer d = Integer.parseInt(s);
-        System.out.println(a+""+b+""+c);
+        System.out.println(s);
         return d;
          }
     public static void main(String[] args) {
-        ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits(123);
+        ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits( 123);
 
     }
 }
