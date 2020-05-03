@@ -1,30 +1,20 @@
 package ru.progwards.java1.lessons.basics;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class ReverseDigits {
-
-    public static int reverseDigits(int number){
-        int num = 123;
-        int a = num % 10;
-        System.out.println(a);
-        int b = (num % 100) / 10;
-        System.out.println(b);
-        int c = (num - num % 10) / 100;
-        System.out.println(c);
-        String s;
-        //int d =
-        //s = a.()+b.toString()+c.toString();
-        //int d = Integer.parseInt(s);
-        //System.out.println(s);
-       // return d;
-        return (num);
-    }
     public static void main(String[] args) {
         ru.progwards.java1.lessons.basics.ReverseDigits.reverseDigits(123);
+    }
 
+
+    public static String reverseDigits(int number) {
+        Integer a = number % 10;
+        Integer b = (number % 100) / 10;
+        Integer c = (number - number % 10) / 100;
+        String s = a.toString() + b.toString() + c.toString();
+        return s;
     }
 }
+
 
 
 
