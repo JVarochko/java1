@@ -6,14 +6,14 @@ public class ReverseDigits {
     }
 
 
-    public static String reverseDigits(int number) {
+    public static int reverseDigits(int number) {
         Integer a = number % 10;
         Integer b = (number % 100) / 10;
         Integer c = (number - number % 10) / 100;
         String s = a.toString() + b.toString() + c.toString();
         int x = Integer.parseInt(s);
-        System.out.println(s);
-        return s;
+        System.out.println(x);
+        return x;
     }
 }
 
