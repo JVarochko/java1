@@ -11,6 +11,8 @@ public class ReverseDigits {
         Integer b = (number % 100) / 10;
         Integer c = (number - number % 10) / 100;
         String s = a.toString() + b.toString() + c.toString();
+        int x = Integer.parseInt(s);
+        System.out.println(s);
         return s;
     }
 }
