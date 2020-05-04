@@ -5,15 +5,12 @@ public class AccuracyDoubleFloat {
 
     final static double earthRadius = 6371.2;
 
-
     public static void main(String[] args) {
-  ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.volumeBallDouble(earthRadius);
-  ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.volumeBallFloat((float)earthRadius);
-  ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.calculateAccuracy(earthRadius);
+        ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.volumeBallDouble(earthRadius);
+        ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.volumeBallFloat((float) earthRadius);
+        ru.progwards.java1.lessons.basics.AccuracyDoubleFloat.calculateAccuracy(earthRadius);
 
-   System.out.println(volumeBallDouble(earthRadius)-volumeBallFloat((float) earthRadius));
     }
-
     public static double volumeBallDouble(double radius) {
         double pi = 3.14;
         double b = 3;
@@ -32,10 +29,14 @@ public class AccuracyDoubleFloat {
     }
 
     public static double calculateAccuracy(double radius) {
-
-       double dif = volumeBallDouble(radius) - volumeBallFloat((float)radius);
-       System.out.println( dif );
-       System.out.println("Разница double и float в объеме Земли "+dif);
+       double vd = volumeBallDouble(radius);
+       float vf = volumeBallFloat((float)radius);
+       double vfd = (double) volumeBallFloat((float) radius);
+       double dif = vd-vfd;
+       // System.out.println(vd+"vd");
+       // System.out.println(vf+"vf");
+        //System.out.println(vfd+"vfd");
+       // System.out.println(dif+"dif");
        return dif;
     }
 
