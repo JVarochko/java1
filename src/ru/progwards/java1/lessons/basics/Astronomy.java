@@ -20,26 +20,14 @@ public class Astronomy {
         return s;
     }
     public static Double earthSquare(){
-        //r =6371.2;
-        //double pi = 3.14;
-        //double s = 4 * pi * (r * r);
-       // System.out.println("Площадь поверхности Земли " +sphereSquare(6371.2));
         return sphereSquare(6371.2);
 
     }
     public static Double mercurySquare(){
-        //r = 2439.7;
-        //double pi = 3.14;
-        //double s = 4 * pi * (r * r);
-        //System.out.println("Площадь поверхности Меркурия "+sphereSquare(2439.7));
-        return sphereSquare(2439.7);
+         return sphereSquare(2439.7);
     }
     public static Double jupiterSquare(){
-       // r = 71492;
-        //double pi = 3.14;
-        //double s = 4 * pi * (r * r);
-        //System.out.println("Площадь поверхности Юпитера "+sphereSquare(71492));
-        return sphereSquare(71492);
+          return sphereSquare(71492);
     }
     public static Double earthVsMercury(){
         double dif1 = earthSquare()/mercurySquare();
