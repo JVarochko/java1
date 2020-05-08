@@ -1,12 +1,10 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class TriangleSimpleInfo {
 
-    final static int a = 4;
-    final static int b = 8;
-    final static int c = 9;
+    final static int a = 1;
+    final static int b = 2;
+    final static int c = 3;
 
     public static void main(String[] args) {
         ru.progwards.java1.lessons.compare_if_cycles.TriangleSimpleInfo.minSide(a, b, c);
@@ -15,39 +13,40 @@ public class TriangleSimpleInfo {
 
     }
     public static int maxSide(int a, int b, int c) {
-        int max = 9;
-        if (a > b) {
-            max = a;
-        if (b > a)
-            max = b;
-        if (c > max)
-            max = c;
+
+        if (a > b && a > c) {
+            System.out.println("maxSide" + a);
         }
-        System.out.println("Наибольшее число " + max);
-        return max;
+        if (b > a && b > c) {
+                System.out.println("maxSide" + b);
+        }
+        if (c > a && c > b) {
+            System.out.println("maxSide" + c);
+        }
+        return a;
     }
 
     public static int minSide(int a, int b, int c) {
 
-        int min = 0;
-        if (a < b) {
-            min = a;
-        if (b < a)
-            min = b;
-        if (c < min)
-            min = c;
+        if (a < b && a < c) {
+            System.out.println("minSide" + a);
         }
-        System.out.println("Наименьшее число " + min);
-        return min;
-    }
+        if (b < a && b < c) {
+            System.out.println("minSide" + b);
+        }
+        if (c < a && c < b) {
+            System.out.println("minSide" + c);
+        }
+        return a;
+        }
 
     public static boolean isEquilateralTriangle(int a, int b, int c) {
-        boolean result1 = a == b & b == c;
-        boolean result2 = a != b & b != c;
-        System.out.println("треугольник равносторонний " + result1);
-        System.out.println("треугольник разносторонний " + result2);
-        return false;
+        boolean result1 = (a == b) && (b == c);
+            System.out.println("треугольник равносторонний " + result1);
 
+        boolean result2 = (a != b) && (b != c);
+            System.out.println("треугольник разносторонний " + result2);
+        return true;
 
     }
 }
