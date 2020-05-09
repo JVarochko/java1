@@ -1,66 +1,48 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
 
-
-
 public class TriangleSimpleInfo {
-    final static int a = 5;
-    final static int b = 3;
-    final static int c = 4;
 
 
     public static void main(String[] args) {
-  ru.progwards.java1.lessons.compare_if_cycles.TriangleSimpleInfo.maxSide(a, b, c);
-  ru.progwards.java1.lessons.compare_if_cycles.TriangleSimpleInfo.minSide(a, b, c);
-  ru.progwards.java1.lessons.compare_if_cycles.TriangleSimpleInfo.isEquilateralTriangle(a, b, c);
-
-
+        maxSide(1, 5, 5);
+        System.out.println(maxSide(1, 5, 5));
+        minSide(1, 5, 5);
+        System.out.println(minSide(1, 5, 5));
+        isEquilateralTriangle(1,5,5);
+        System.out.println(isEquilateralTriangle(1,5,5));
     }
     public static int maxSide(int a, int b, int c) {
-//         a = 5;
-//         b = 3;
-//         c = 4;
 
-        if (a > b && a > c) {
-            System.out.println("maxSide" + a);
+        if (a >= b && a >= c) {
+            return a;
         }
-        if (b > a && b > c) {
-                System.out.println("maxSide" + b);
+        if (b >= a && b >= c) {
+            return b;
         }
-        if (c > a && c > b) {
-            System.out.println("maxSide" + c);
+        return c;
         }
-        return a;
-    }
+
 
     public static int minSide(int a, int b, int c) {
-//         a = 5;
-//         b = 3;
-//         c = 4;
 
-        if (a < b && a < c) {
-            System.out.println("minSide" + a);
+        if (a <= b && a <= c) {
+            return a;
         }
-        if (b < a && b < c) {
-            System.out.println("minSide" + b);
+        if (b <= a && b <= c) {
+            return b;
         }
-        if (c < a && c < b) {
-            System.out.println("minSide" + c);
+        return c;
         }
-        return a;
-        }
+
 
     public static boolean isEquilateralTriangle(int a, int b, int c) {
 
-
-         boolean result1 = (a == b) && (b == c);
-            System.out.println("треугольник равносторонний " + result1);
-
-        boolean result2 = (a != b) && (b != c);
-            System.out.println("треугольник разносторонний " + result2);
-        return false;
+        boolean result = a == b && b == c;
+        return result;
+        }
 
     }
-}
+
 
 
 
