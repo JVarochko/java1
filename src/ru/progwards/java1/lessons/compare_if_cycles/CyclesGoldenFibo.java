@@ -10,7 +10,7 @@ public class CyclesGoldenFibo {
 
     }
     public static boolean containsDigit(int number, int digit){
-        boolean result = (number==digit);
+        boolean result = (number>=digit);
         return result;
 
    }
