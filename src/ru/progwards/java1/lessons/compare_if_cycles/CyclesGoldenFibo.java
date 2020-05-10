@@ -10,7 +10,7 @@ public class CyclesGoldenFibo {
         containsDigit(1,1);
         System.out.println(containsDigit(1,1));
        fiboNumber(15);
-        isGoldenTriangle(5,5,3);
+        isGoldenTriangle(8,8,5);
         System.out.println(isGoldenTriangle(5,5,3));
         //checkGolden(5,3);
 
@@ -38,7 +38,7 @@ public class CyclesGoldenFibo {
 
         public static boolean isGoldenTriangle(int a, int b, int c) {
 
-            boolean result = ((a == b) & ((double)a / c) >= 1.61703 && ((double)a / c) <= 1.61903) | ((b == c) & ((double)b / a) >= 1.61703 && ((double)b / a) <= 1.61903) | ((a == c) & ((double)a / b)  >= 1.61703 && ((double)a / b) <= 1.61903);
+            boolean result = ((a == b) && ((double)a / c) >= 1.61703 || ((double)a / c) <= 1.61903) | ((b == c) && ((double)b / a) >= 1.61703 || ((double)b / a) <= 1.61903) | ((a == c) && ((double)a / b)  >= 1.61703 || ((double)a / b) <= 1.61903);
             return result;
         }
 
