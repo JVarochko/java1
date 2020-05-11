@@ -25,17 +25,21 @@ public class CyclesGoldenFibo {
         int a = 1;
         int b = 1;
         int c = 0;
-        System.out.println(a+" "+b);
-        for (int i = 3; i<=n; i++) {
-         c = a + b;
-         System.out.println(c);
-         a=b;
-         b=c;
+        System.out.println(a);
+        System.out.println(b);
+        if (n==1|n==2) {
+            c = 1;
+           System.out.println(c);
+        }else {
+            for (int i = 0; i <= n - 3; i++) {
+                c = a + b;
+                a = b;
+                b = c;
+                System.out.println(c);
             }
-        System.out.println();
+        }
         return c;
     }
-
         public static boolean isGoldenTriangle(int a, int b, int c) {
 
             boolean result = ((a == b) && ((double)a / c) >= 1.61703 || ((double)a / c) <= 1.61903) | ((b == c) && ((double)b / a) >= 1.61703 || ((double)b / a) <= 1.61903) | ((a == c) && ((double)a / b)  >= 1.61703 || ((double)a / b) <= 1.61903);
