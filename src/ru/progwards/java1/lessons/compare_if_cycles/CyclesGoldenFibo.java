@@ -48,15 +48,19 @@ public class CyclesGoldenFibo {
     }
         public static boolean isGoldenTriangle(int a, int b, int c) {
 
-            boolean result = ((a == b) && ((double)a / c) >= 1.61703 || ((double)a / c) <= 1.61903) | ((b == c) && ((double)b / a) >= 1.61703 || ((double)b / a) <= 1.61903) | ((a == c) && ((double)a / b)  >= 1.61703 || ((double)a / b) <= 1.61903);
-            return result;
-        }
+                boolean result = ((a == b) && ((double) a / c) >= 1.61703 && ((double) a / c) <= 1.61903)|((b == c) && ((double) b / a) >= 1.61703 && ((double) b / a) <= 1.61903)|((a == c) && ((double) a / b) >= 1.61703 && ((double) a / b) <= 1.61903);
+                return result;
+            }
 
-        //public static boolean checkGolden(int x, int y) { // метод для вычисления отношения ребра к основанию треугольника return если соотв-ет
-         // double div = ((double) x) / y);
-        //   return div >= 1.61703 && div <= 1.61903;
-        //}
-    }
+            }
+
+
+
+//        public static boolean checkGolden(int x, int y) { // метод для вычисления отношения ребра к основанию треугольника return если соотв-ет
+//        double div = ((double) x) / y);
+//        return div >= 1.61703 && div <= 1.61903;
+        
+
 
 
 
