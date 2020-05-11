@@ -59,7 +59,7 @@ public class CyclesGoldenFibo {
 //        public static boolean checkGolden(int x, int y) { // метод для вычисления отношения ребра к основанию треугольника return если соотв-ет
 //        double div = ((double) x) / y);
 //        return div >= 1.61703 && div <= 1.61903;
-        
+
 
 
 
