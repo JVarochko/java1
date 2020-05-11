@@ -16,7 +16,13 @@ public class CyclesGoldenFibo {
 
     }
     public static boolean containsDigit(int number, int digit){
-        boolean result = (number>=digit);
+        int firstDigit = number / 10;
+        int secondDigit = (number/10)%10;
+        int thirdDigit = number%10;
+        int count =0;
+        if (firstDigit == secondDigit);
+        count++;
+        boolean result = (number==digit);
         return result;
 
    }
