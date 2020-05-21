@@ -12,7 +12,8 @@ public class Animal {
 
     public Animal(double weight) { //конструктор, который сохраняет вес животного
         this.weight = weight;
-    }
+         }
+
 
     public AnimalKind getKind() {// метод, который возвращает вид животного ANIMAL
         System.out.println(AnimalKind.ANIMAL);
@@ -26,7 +27,6 @@ public class Animal {
 
     public String toString() {//метод, который возвращает информацию о животном в формате: I am <AnimalKind>, eat <FoodKind>
         String str1 = "I am ";
-        //String str2 = AnimalKind.class.getSuperclass();
         String str3 = ", eat ";
         System.out.println(str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass());
         return (str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass());
@@ -38,7 +38,8 @@ public class Animal {
     }
 
     public double getFoodCoeff(){//возвращает коэффициент веса еды к весу тела животного 0.02
-        double FoodCoeff = weight/50;
+
+        double FoodCoeff = (weight/50);
         return FoodCoeff;
 
     }
@@ -51,8 +52,8 @@ public class Animal {
     public String toStringFull() {
         String str1 = "I am ";
         String str3 = ", eat ";
-        System.out.println(str1 + AnimalKind.ANIMAL + str3 + FoodKind.UNKNOWN+calculateFoodWeight());
-        return (str1 + AnimalKind.ANIMAL + str3 + FoodKind.UNKNOWN+calculateFoodWeight());
+        System.out.println(str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass()+calculateFoodWeight());
+        return (str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass()+calculateFoodWeight());
 
     }
      enum FoodKind {

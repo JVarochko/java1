@@ -20,7 +20,7 @@ public class Hamster extends Animal { //класс Hamster, потомок кл�
         return FoodKind.CORN;
     }
     public double getFoodCoeff() {//возвращает коэффициент веса еды к весу тела животного 0.03
-        double FoodCoeff = weight / 33.3;
+        double FoodCoeff = weight / 33.333333333;
         return FoodCoeff;
     }
 
