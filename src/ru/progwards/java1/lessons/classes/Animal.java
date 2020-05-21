@@ -24,44 +24,10 @@ public class Animal {
     }
 
     public String toString() {
-
         String str1 = "I am ";
-
         String str3 = " , eat ";
-
-
-       
-        return getClass().getName() + "@" + Integer.toHexString(hashCode());
-
-        //String str1 = "I am ";
-
-        //String str3 = " , eat ";
-        //System.out.println("I am "+AnimalKind getkind+str3+FoodKind);
-
-
-
-
-//        System.out.print(str1);
-//        System.out.print(AnimalKind.ANIMAL);
-//        System.out.print(str3);
-//        System.out.print(FoodKind.UNKNOWN);
-//
-//        System.out.print(str1);
-//        System.out.print(AnimalKind.COW);
-//        System.out.print(str3);
-//        System.out.print(FoodKind.HAY);
-//
-//        System.out.print(str1);
-//        System.out.print(AnimalKind.HAMSTER);
-//        System.out.print(str3);
-//        System.out.print(FoodKind.HAY);
-//
-//        System.out.print(str1);
-//        System.out.print(AnimalKind.DUCK);
-//        System.out.print(str3);
-//        System.out.print(FoodKind.CORN);
-//        return (str1+str3);
-
+        System.out.println(str1+AnimalKind.ANIMAL+str3+FoodKind.UNKNOWN);
+        return (str1+AnimalKind.ANIMAL+str3+FoodKind.UNKNOWN);
 
     }
      enum FoodKind {
