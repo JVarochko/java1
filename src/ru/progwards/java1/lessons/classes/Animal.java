@@ -26,9 +26,11 @@ public class Animal {
 
     public String toString() {//метод, который возвращает информацию о животном в формате: I am <AnimalKind>, eat <FoodKind>
         String str1 = "I am ";
+        //String str2 = AnimalKind.class.getSuperclass();
         String str3 = ", eat ";
-        System.out.println(str1+AnimalKind.ANIMAL+str3+FoodKind.UNKNOWN);
-        return (str1+AnimalKind.ANIMAL+str3+FoodKind.UNKNOWN);
+        System.out.println(str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass());
+        return (str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass());
+
     }
 
     public double getWeight(){//метод, который возвращает вес животного

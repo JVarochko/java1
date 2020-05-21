@@ -22,5 +22,5 @@ public class Duck extends Animal { //класс Duck, потомок класс�
         double FoodCoeff = weight / 25;
         return FoodCoeff;
     }
-    }
+}
 
