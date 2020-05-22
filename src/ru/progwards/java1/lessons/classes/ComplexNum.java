@@ -46,7 +46,7 @@ public class ComplexNum {
 
     //метод - умножение комплексных чисел по формуле:(a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
      public ComplexNum mul(ComplexNum num){
-         ComplexNum n = new ComplexNum ((this.a*num.a - this.b*num.b)+(this.b*num.a + this.a*num.b));
+         ComplexNum n = new ComplexNum ((this.a*num.a - this.b*num.b),(this.b*num.a + this.a*num.b));
          return n;
          //(this.a*num.a - this.b*num.b)+(this.b*num.a + this.a*num.b);
     }

@@ -21,7 +21,8 @@ public class Cow extends Animal { // класс Cow, потомок класса
     }
 
     public double getFoodCoeff() {//возвращает коэффициент веса еды к весу тела животного 0.05
-        double FoodCoeff = weight / 20;
+        double w = 20;
+        double FoodCoeff = weight / w;
         return FoodCoeff;
     }
 }

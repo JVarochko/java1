@@ -19,7 +19,8 @@ public class Duck extends Animal { //класс Duck, потомок класс�
         return FoodKind.CORN;
     }
     public double getFoodCoeff() {//возвращает коэффициент веса еды к весу тела животного 0.04
-        double FoodCoeff = weight / 25;
+        double w = 25;
+        double FoodCoeff = weight / w;
         return FoodCoeff;
     }
 }

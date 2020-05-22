@@ -9,6 +9,7 @@ public class Animal {
     }
     double weight;
     double FoodCoeff;
+    double w;
 
     public Animal(double weight) { //конструктор, который сохраняет вес животного
         this.weight = weight;
@@ -28,6 +29,7 @@ public class Animal {
     public String toString() {//метод, который возвращает информацию о животном в формате: I am <AnimalKind>, eat <FoodKind>
         String str1 = "I am ";
         String str3 = ", eat ";
+
         System.out.println(str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass());
         return (str1+AnimalKind.class.getSuperclass()+str3+FoodKind.class.getSuperclass());
 
@@ -38,14 +40,14 @@ public class Animal {
     }
 
     public double getFoodCoeff(){//возвращает коэффициент веса еды к весу тела животного 0.02
-
-        double FoodCoeff = (weight/50);
+        double w = 50;
+        double FoodCoeff = weight/w;
         return FoodCoeff;
 
     }
     //метод который рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела.
     public double calculateFoodWeight(){
-        double FoodWeight = weight * FoodCoeff;
+        double FoodWeight = (weight * FoodCoeff)/w;
         return FoodWeight;
     }
     //метод, который возвращает информацию о животном в формате: I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>
