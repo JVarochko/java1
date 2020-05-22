@@ -1,14 +1,19 @@
 package ru.progwards.java1.lessons.classes;
 
-
 public class ComplexNum {
+    public ComplexNum(int i) {
+    }
+
     public static void main(String[] args) {
 
         ComplexNum n1 = new ComplexNum(5, 8);
         ComplexNum n2 = new ComplexNum(3, 9);
+        n1.add(n2);
+        n1.sub(n2);
+        n1.div(n2);
+        n1.mul(n2);
 
     }
-
     int a;
     int b;
 
@@ -41,14 +46,13 @@ public class ComplexNum {
 
     //метод - умножение комплексных чисел по формуле:(a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
      public ComplexNum mul(ComplexNum num){
-         ComplexNum n = new ComplexNum (this.a*num.a ,this.b*num.b);
+         ComplexNum n = new ComplexNum ((this.a*num.a - this.b*num.b)+(this.b*num.a + this.a*num.b));
          return n;
     }
     //деление комплексных чисел по формуле:(a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
     public ComplexNum div(ComplexNum num){
-        ComplexNum n = new ComplexNum (this.a/num.a ,this.b/num.b);
+        ComplexNum n = new ComplexNum ((this.a*num.a + this.b*num.b)/(num.a*num.a + num.b*num.b),((this.b*num.a - this.a*num.b)/(num.a*num.a + num.b*num.b)));
         return n;
     }
 
 }
-//}
