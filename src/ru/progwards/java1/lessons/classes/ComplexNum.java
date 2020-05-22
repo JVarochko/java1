@@ -8,10 +8,10 @@ public class ComplexNum {
 
         ComplexNum n1 = new ComplexNum(5, 8);
         ComplexNum n2 = new ComplexNum(3, 9);
-        n1.add(n2);
-        n1.sub(n2);
-        n1.div(n2);
-        n1.mul(n2);
+        n1.add(n2).toString();
+        n1.sub(n2).toString();
+        n1.div(n2).toString();
+        n1.mul(n2).toString();
 
     }
     int a;
@@ -48,6 +48,7 @@ public class ComplexNum {
      public ComplexNum mul(ComplexNum num){
          ComplexNum n = new ComplexNum ((this.a*num.a - this.b*num.b)+(this.b*num.a + this.a*num.b));
          return n;
+         //(this.a*num.a - this.b*num.b)+(this.b*num.a + this.a*num.b);
     }
     //деление комплексных чисел по формуле:(a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
     public ComplexNum div(ComplexNum num){
