@@ -3,30 +3,37 @@ import java.util.Arrays;
 public class ArraySort {
 
     public static void main(String[] args) {
-   sort();
+        sort();
     }
-    public static void sort(){
-          int[] a = {7, 4, 12, 6, 1, 18, 23, 3, 8, 15};
-        int size = a.length;
 
-        for (int i = 0; i < size; i++) {
-            int tmp = a[i];
-
-            for (int j = (i + 1); j < size; j++) {
-
-                if (a[i] < a[j]) {
-                 a[i]=tmp;
-                    System.out.println(a[i]);
-                }
-
-                if (a[i] > a[j])
-                    a[i]=a[j];
-                    a[j]=tmp;
-                    System.out.println(a[j]);
-            }
+    public static void sort() {
+        int[] a = {7, 4, 12, 6, 1, 18, 23, 3, 8, 15};
+        for (int num:a){
+            System.out.print(num+" ");
         }
+         int count;
+        do {
+            count = 0;
+            for (int i = 0; i < a.length - 1; i++) {
+                int j = (i + 1);
+                if (a[i] > a[j]) {
+                    int temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                    count++;
+                }
+            }
+        } while (count>0);
+        System.out.println();
+        for(int num:a){
+            System.out.print(num+" ");
 
+
+            }
+
+        }
     }
-}
+
+
 
 

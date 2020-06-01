@@ -6,6 +6,9 @@ public class Eratosthenes {
     int N;
 
     public static void main(String args[]) {
+
+
+
     }
 
     // конструктор который должен разместить массив sieve с
@@ -18,7 +21,7 @@ public class Eratosthenes {
     //который, собственно и реализует алгоритм Эратосфена, просеивая составные числа.
     // Подсказка - нужно реализовать 2 вложенных цикла, внешний, например по i от 2 до N-1, и внутренний,
     // например по j который будет просеивать числа, кратные переменной внешнего цикла i*j.
-    private void sift() {
+    public void sift() {
         for (int i = 2; i <= N; i++) {
             boolean isPrime = true;
 
