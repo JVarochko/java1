@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.arrays;
+
 import java.util.Arrays;
+
 public class ArraySort {
 
     public static void main(String[] args) {
@@ -7,11 +9,12 @@ public class ArraySort {
     }
 
     public static void sort() {
-        int[] a = {7, 4, 12, 6, 1, 18, 23, 3, 8, 15};
-        for (int num:a){
-            System.out.print(num+" ");
+        //int[] a = {7, 4, 12, 6, 1, 18, 23, 3, 8, 15};
+        int[] a = {};
+        for (int num : a) {
+            System.out.print(num + " ");
         }
-         int count;
+        int count;
         do {
             count = 0;
             for (int i = 0; i < a.length - 1; i++) {
@@ -23,16 +26,16 @@ public class ArraySort {
                     count++;
                 }
             }
-        } while (count>0);
+        } while (count > 0);
         System.out.println();
-        for(int num:a){
-            System.out.print(num+" ");
+        for (int num : a) {
+            System.out.print(num + " ");
 
-
-            }
 
         }
+
     }
+}
 
 
 
