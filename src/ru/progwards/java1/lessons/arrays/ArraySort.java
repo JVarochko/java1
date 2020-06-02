@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class ArraySort {
 
     public static void main(String[] args) {
-    
+    sort(new int [] {});
     }
 
     public static void sort(int[] a) {
-         a = new int[]{7, 4, 12, 6, 1, 18, 23, 3, 8, 15};
+         a = new int[]{-15, -21, -5, 6, 1, 18, 23, 3, 8, 15};
 
         for (int num : a) {
-            System.out.print(num + " ");
+           // System.out.print(num + " ");
         }
         int count;
         do {
