@@ -9,7 +9,7 @@ public class ArraySort {
     }
 
     public static void sort(int[] a) {
-         a = new int[]{-15, -21, -5, 6, 1, 18, 23, 3, 8, 15};
+         a = new int[]{ 35, -21, -5, 6, 1, -18, 23, -3, 8, 15, -56};
 
         for (int num : a) {
            // System.out.print(num + " ");
