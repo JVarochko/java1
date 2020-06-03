@@ -20,11 +20,11 @@ public class Eratosthenes {
 
     private boolean sieve(int n) {
 
-        for (int i = 2; i <= N; i++) {
+        for (int i = 0; i <= N; i++) {
             boolean isPrime = true;
             System.out.println(true+" true");
 
-            for (int j = 2; j < i; j++) {
+            for (int j = 0; j < i; j++) {
                 if (i % j == 0) {
                     isPrime = false;
             System.out.println(false+" false");
