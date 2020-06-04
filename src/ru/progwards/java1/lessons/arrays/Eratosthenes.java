@@ -1,13 +1,16 @@
 
 package ru.progwards.java1.lessons.arrays;
 
+import java.util.Arrays;
+
 public class Eratosthenes {
     int n;
-    int sieve[];
+    private boolean sieve[];
     int N;
 
     public static void main(String args[]) {
         boolean sieve[];
+        boolean isSimple;
 
      }
 
@@ -30,9 +33,10 @@ public class Eratosthenes {
     }
 
     public Eratosthenes(int N) {
-        this.sieve = sieve;
+       // this.sieve = sieve;
         this.N = N;
-        //Arrays.fill [N] {true};
+        int n = this.n;
+        //Arrays.fill([true](n));
         sift();
     }
 
