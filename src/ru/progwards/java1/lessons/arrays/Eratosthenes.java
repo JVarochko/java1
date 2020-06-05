@@ -11,35 +11,31 @@ public class Eratosthenes {
     public static void main(String args[]) {
         boolean sieve[];
         boolean isSimple;
-
-     }
-
+    }
     private boolean sieve() {
-
         for (int i = 2; i <= N; i++) {
             boolean isPrime = true;
             System.out.println(true + " true");
-
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
                     isPrime = false;
+                    if ( i==j)
+                        continue;
                     System.out.println(false + " false");
                     break;
-
                 }
             }
         }
         return false;
     }
-
     public Eratosthenes(int N) {
-       // this.sieve = sieve;
+        sieve = new boolean[N];
+        // this.sieve = sieve;
         this.N = N;
         int n = this.n;
-        //Arrays.fill([true](n));
+        Arrays.fill(sieve,true);
         sift();
     }
-
     private void sift() {
         for (int i = 2; i >= N - 1; i++) {
             //boolean isPrime = true;
@@ -51,7 +47,6 @@ public class Eratosthenes {
             }
         }
     }
-
     public boolean isSimple(int n) {
         return sieve();
     }
