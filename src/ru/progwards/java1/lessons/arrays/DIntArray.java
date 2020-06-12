@@ -15,7 +15,7 @@ public class DIntArray {
         intArray.atDelete(3);
         System.out.println(Arrays.toString(intArray.getArray()));
         intArray.at(3);
-        
+
     }
 
     private int[] array = {};// private переменную - массив целых чисел.
@@ -42,11 +42,17 @@ public class DIntArray {
         int index = array.length;
         int[] array1 = new int[array.length - 1];
         System.arraycopy(array, 0, array1, 0, pos );
-        //System.arraycopy(array, pos - 1, array1, pos, array.length -pos-1);
         System.arraycopy(array, pos+1, array1, pos, array.length -pos-1);
         array = array1;
     }
     public int at(int pos) {//возвращает элемент по индексу pos.
+        add(pos);
+        System.out.println(pos);
+        atInsert(pos,2);
+        System.out.println(pos);
+        atDelete(pos);
+        System.out.println(pos);
+        
         return pos;
     } //возвращает элемент по индексу pos.
 }
