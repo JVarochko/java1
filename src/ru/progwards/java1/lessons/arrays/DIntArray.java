@@ -8,6 +8,7 @@ public class DIntArray {
         DIntArray intArray = new DIntArray();
         for (int elem : array) {
             intArray.add(elem);
+
         }
         System.out.println(Arrays.toString(intArray.getArray()));
         intArray.atInsert(3,2);
@@ -39,20 +40,25 @@ public class DIntArray {
         array = array1;
     }
     public void atDelete(int pos) {// удаляет элемент в позиции pos массива
-        int index = array.length;
+        //int index = array.length;
         int[] array1 = new int[array.length - 1];
         System.arraycopy(array, 0, array1, 0, pos );
         System.arraycopy(array, pos+1, array1, pos, array.length -pos-1);
         array = array1;
     }
     public int at(int pos) {//возвращает элемент по индексу pos.
-        add(pos);
-        System.out.println(pos);
-        atInsert(pos,2);
-        System.out.println(pos);
-        atDelete(pos);
-        System.out.println(pos);
-        
+        for (int i = 0; i < array.length; i++){
+            System.out.println("pos"+i+"="+array[i]);
+        }
+
+
+//        add(pos);
+//        System.out.println(pos);
+//        atInsert(pos,2);
+//        System.out.println(pos);
+//        atDelete(pos);
+//        System.out.println(pos);
+
         return pos;
     } //возвращает элемент по индексу pos.
 }
