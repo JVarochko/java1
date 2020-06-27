@@ -5,9 +5,11 @@ public class SumBits {
 
     public static void main(String[] args) {
         //System.out.println(1101);
-        System.out.println((byte) 00000010);
-        System.out.println(sumBits((byte) 00000010));
-        System.out.println(sumBits((byte)  0100101));
+       // System.out.println((byte) 00000010);
+        System.out.println(sumBits((byte) 00000010)); //10
+        System.out.println(sumBits((byte)  0100101)); //37
+        System.out.println(sumBits((byte)  00000000));
+
        //System.out.println(Integer.toBinaryString(13));
         //System.out.println(Integer.toBinaryString(0b00000010));
         //System.out.println(Integer.toBinaryString(1101));
@@ -18,10 +20,10 @@ public class SumBits {
         int val = value & 0b1111_1111;
         while (val!= 0) {
             if ((val & 1) != 0) sum++;
-            val >>= 1;
+            //val = val >> 1;
             val = (byte) (val >> 1);
         }
-        return sum+1;
+        return sum;
     }
 
 }
