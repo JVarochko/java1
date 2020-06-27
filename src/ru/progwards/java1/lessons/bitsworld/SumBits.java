@@ -4,12 +4,13 @@ package ru.progwards.java1.lessons.bitsworld;
 public class SumBits {
 
     public static void main(String[] args) {
-        System.out.println(1101);
-        System.out.println((byte) 1101);
-        System.out.println(sumBits((byte) 1101));
-        System.out.println(Integer.toBinaryString(13));
-        System.out.println(Integer.toBinaryString(0b1101));
-        System.out.println(Integer.toBinaryString(1101));
+        //System.out.println(1101);
+        System.out.println((byte) 00000010);
+        System.out.println(sumBits((byte) 00000010));
+        System.out.println(sumBits((byte)  0100101));
+       //System.out.println(Integer.toBinaryString(13));
+        //System.out.println(Integer.toBinaryString(0b00000010));
+        //System.out.println(Integer.toBinaryString(1101));
     }
 
     public static int sumBits(byte value) {
@@ -19,9 +20,8 @@ public class SumBits {
             if ((val & 1) != 0) sum++;
             val >>= 1;
             val = (byte) (val >> 1);
-
         }
-        return sum;
+        return sum+1;
     }
 
 }
