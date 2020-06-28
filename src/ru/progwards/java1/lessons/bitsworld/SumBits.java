@@ -8,10 +8,7 @@ public class SumBits {
         System.out.println(sumBits((byte)  0100101)); //37
         System.out.println(sumBits((byte)  00000000));
 
-       //System.out.println(Integer.toBinaryString(13));
-        //System.out.println(Integer.toBinaryString(0b00000010));
-        //System.out.println(Integer.toBinaryString(1101));
-    }
+         }
 
     public static int sumBits(byte value) {
         int sum = 0;

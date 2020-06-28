@@ -7,12 +7,15 @@ checkBit((byte) 8,8);
     }
 
     public static int checkBit(byte value, int bitNumber){
-       // value =0;
-        byte [] array = new byte [8];
-        value = (byte) (value >> 1);
-        //bitNumber = (bitNumber >> 1);
-        return value;
 
+
+        //String str = 0;
+//        bitNumber = 0;
+//        for (int i = 0; i < str.length(); i++) {
+//            bitNumber <<= 1;
+//            if (str.charAt(i) == '1') bitNumber++;
+//        }
+        return bitNumber;
     }
 
 }
