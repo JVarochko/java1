@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class CheckBit {
     public static void main(String[] args) {
-checkBit((byte) 6,5);
+checkBit((byte) 5,5);
         System.out.println(checkBit((byte)5,5));
     }
 
@@ -12,7 +12,7 @@ checkBit((byte) 6,5);
         value = (byte) (value >> 1);
         bitNumber = (bitNumber >> 1);
 
-        return bitNumber;
+        return value;
 
     }
 
