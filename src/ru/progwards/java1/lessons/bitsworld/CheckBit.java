@@ -9,6 +9,7 @@ checkBit((byte) 8,8);
 
     public static int checkBit(byte value, int bitNumber){
 
+
     byte aByte = (byte)0b00100001;
         //String str = 0;
 //        bitNumber = 0;
