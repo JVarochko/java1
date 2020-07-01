@@ -9,12 +9,12 @@ public class CheckBit {
 
     public static int checkBit(byte value, int bitNumber){
         int val = value & 0b1111_1111;
-     byte [] array = new byte [8];
+     byte [] array = new byte [bitNumber];
         for (int i = 0; i < 8; i++) {
-            System.out.println(val+bitNumber);
+            return val;
         }
         val = val >> 1;
-     return bitNumber;
+     return val;
     }
 
 }
