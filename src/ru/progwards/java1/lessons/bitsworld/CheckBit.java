@@ -14,7 +14,7 @@ public class CheckBit {
             return val;
         }
         val = val >> 1;
-     return val;
+     return bitNumber;
     }
 
 }
