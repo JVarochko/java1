@@ -11,7 +11,7 @@ public class CheckBit {
         int val = value & 0b1111_1111;
      byte [] array = new byte [bitNumber];
         for (int i = 0; i < 8; i++) {
-            return val;
+            return bitNumber;
         }
         val = val >> 1;
      return bitNumber;
