@@ -7,15 +7,15 @@ public class Animal {
     public static void main(String[] args) {
         System.out.println(AnimalKind.ANIMAL);
         System.out.println(UNKNOWN);
-        System.out.println(String.CASE_INSENSITIVE_ORDER);
+       // System.out.println(Stri);
 
     }
-
     double weight;
     double FoodCoeff;
     double w;
 
     public Animal(double weight) { //конструктор, который сохраняет вес животного
+
         this.weight = weight;
     }
 
@@ -68,8 +68,8 @@ public class Animal {
             //  метод, который возвращает информацию о цене 1 кг еды.
             // метод реализовать в виде switch по FoodKind со следующими значениями
             // HAY : 20  // CORN: 50 // UNKNOWN: 0
-
-            switch (FoodKind) {
+        //double getFood1kgPrice=FoodKind.toString();
+                switch (FoodKind) {
                 case HAY:
                     System.out.println("20");
                     return 20;
@@ -90,7 +90,7 @@ public class Animal {
 
         }
 
-    public  void compareFoodPrice(Animal animal){
+    public int compareFoodPrice(Animal animal){
         //который возвращает результаты сравнения цены еды для данного животного
         // с ценой еды для другого животного, используя Double.compare;
             Integer HAY = 20;
@@ -99,9 +99,8 @@ public class Animal {
             System.out.println(HAY.compareTo(CORN));
             System.out.println(HAY.compareTo(UNKNOWN));
             System.out.println(CORN.compareTo(UNKNOWN));
-            //return "";
+            return FoodKind.compareTo(FoodKind);
             }
-
 
 
 }
