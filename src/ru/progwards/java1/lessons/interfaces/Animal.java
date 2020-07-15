@@ -63,6 +63,11 @@ public class Animal {
         System.out.println(str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
         return (str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
     }
+    //______________________________________________________________________________________________
+   // public boolean equals(Object anObject){
+
+
+
 
         public double getFood1kgPrice() {
             //  метод, который возвращает информацию о цене 1 кг еды.
