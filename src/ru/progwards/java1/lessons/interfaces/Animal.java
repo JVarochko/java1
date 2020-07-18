@@ -2,12 +2,16 @@ package ru.progwards.java1.lessons.interfaces;
 
 import static ru.progwards.java1.lessons.interfaces.FoodKind.*;
 
-public class Animal {
+public class Animal implements FoodCompare {
 
     public static void main(String[] args) {
         System.out.println(AnimalKind.ANIMAL);
         System.out.println(UNKNOWN);
        // System.out.println(Stri);
+
+
+
+
 
     }
     double weight;
@@ -64,8 +68,13 @@ public class Animal {
         return (str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
     }
     //______________________________________________________________________________________________
-   // public boolean equals(Object anObject){
-
+    public boolean equals(Object anObject){
+    //возвращает true, если объекты равны и false если не равны по параметру - вес животного.
+        if (this == anObject) return true;
+        if (anObject == null || getClass() != anObject.getClass()) return false;
+        Animal that = (Animal) anObject;
+        return Double.compare(that.getWeight(), this.getWeight())==0;
+    }
 
 
 
@@ -76,13 +85,13 @@ public class Animal {
         //double getFood1kgPrice=FoodKind.toString();
                 switch (FoodKind) {
                 case HAY:
-                    System.out.println("20");
+                    //System.out.println("20");
                     return 20;
                 case CORN:
-                    System.out.println("50");
+                    //System.out.println("50");
                     return 50;
                 case UNKNOWN:
-                System.out.println("0");
+                //System.out.println("0");
                 return 0;
             }
         return getFood1kgPrice();
@@ -106,6 +115,7 @@ public class Animal {
             System.out.println(CORN.compareTo(UNKNOWN));
             return FoodKind.compareTo(FoodKind);
             }
+
 
 
 }

@@ -9,6 +9,7 @@ package ru.progwards.java1.lessons.interfaces;
         }
 
         public Cow(double weight) {//конструктор
+
             super(weight);
         }
 
