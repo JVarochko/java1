@@ -1,11 +1,12 @@
 package ru.progwards.java1.lessons.interfaces;
 
-
-
-    public class Cow extends Animal { // класс Cow, потомок класса Animal
+    public class Cow extends Animal {
+        private static double FoodCoeff; // класс Cow, потомок класса Animal
         public static void main(String[] args) {
             System.out.println(AnimalKind.COW);
             System.out.println(FoodKind.HAY);
+            double foodCoeff = FoodCoeff;
+            System.out.println(foodCoeff);
         }
 
         public Cow(double weight) {//конструктор

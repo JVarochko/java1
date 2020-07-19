@@ -1,7 +1,5 @@
 package ru.progwards.java1.lessons.interfaces;
 
-
-
 public class Duck extends Animal { //класс Duck, потомок класса Animal
         public static void main(String[] args) {
             System.out.println(AnimalKind.DUCK);

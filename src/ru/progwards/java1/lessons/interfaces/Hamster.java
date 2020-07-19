@@ -1,6 +1,5 @@
 package ru.progwards.java1.lessons.interfaces;
 
-
     public class Hamster extends Animal { //класс Hamster, потомок класса Animal
         public static void main(String[] args) {
             System.out.println(AnimalKind.HAMSTER);

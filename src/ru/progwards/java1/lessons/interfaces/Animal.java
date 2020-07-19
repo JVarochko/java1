@@ -1,19 +1,11 @@
 package ru.progwards.java1.lessons.interfaces;
 
 import static ru.progwards.java1.lessons.interfaces.FoodKind.*;
+import static ru.progwards.java1.lessons.interfaces.FoodKind.UNKNOWN;
 
 public class Animal implements FoodCompare {
 
-    public static void main(String[] args) {
-        System.out.println(AnimalKind.ANIMAL);
-        System.out.println(UNKNOWN);
-       // System.out.println(Stri);
 
-
-
-
-
-    }
     double weight;
     double FoodCoeff;
     double w;
@@ -67,55 +59,90 @@ public class Animal implements FoodCompare {
         System.out.println(str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
         return (str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
     }
+
     //______________________________________________________________________________________________
-    public boolean equals(Object anObject){
-    //возвращает true, если объекты равны и false если не равны по параметру - вес животного.
+    public boolean equals(Object anObject) {
+        //возвращает true, если объекты равны и false если не равны по параметру - вес животного.
         if (this == anObject) return true;
         if (anObject == null || getClass() != anObject.getClass()) return false;
         Animal that = (Animal) anObject;
-        return Double.compare(that.getWeight(), this.getWeight())==0;
+        return Double.compare(that.getWeight(), this.getWeight()) == 0;
+    }
+
+
+    public double getFood1kgPrice() {
+        //  метод, который возвращает информацию о цене 1 кг еды.
+        // метод реализовать в виде switch по FoodKind со следующими значениями
+        // HAY : 20  // CORN: 50 // UNKNOWN: 0
+        //double getFood1kgPrice=FoodKind.toString();
+        switch (FoodKind) {
+            case HAY:
+                //System.out.println("20");
+                return 20;
+            case CORN:
+                //System.out.println("50");
+                return 50;
+            case UNKNOWN:
+                //System.out.println("0");
+                return 0;
+        }
+        return getFood1kgPrice();
+    }
+
+    public double getFoodPrice() {
+        // который возвращает информацию о цене еды для данного животного по формуле
+        //calculateFoodWeight() * getFood1kgPrice()
+        double getFoodPrice = calculateFoodWeight() * getFood1kgPrice();
+        return getFoodPrice;
+
+    }
+
+    public int compareFoodPrice(Animal animal) {
+        //который возвращает результаты сравнения цены еды для данного животного
+        // с ценой еды для другого животного, используя Double.compare;
+        Integer HAY = 20;
+        Integer CORN = 50;
+        Integer UNKNOWN = 0;
+        int result = 0;
+        if (Double.compare(HAY, CORN) == 0)
+           result = 0;
+            System.out.println("HAY=CORN");
+        if (Double.compare(HAY, UNKNOWN) == 0)
+            result = 0;
+            System.out.println("HAY=UNKNOWN");
+        if (Double.compare(CORN, UNKNOWN) == 0)
+            result = 0;
+            System.out.println("CORN=UNKNOWN");
+        if (Double.compare(HAY, CORN) < 0)
+            result =-1;
+            System.out.println("HAY<CORN");
+        if (Double.compare(HAY, UNKNOWN) < 0)
+            result =-1;
+            System.out.println("HAY<UNKNOWN");
+        if (Double.compare(CORN, UNKNOWN) < 0)
+            result =-1;
+            System.out.println("CORN<UNKNOWN");
+        if (Double.compare(HAY, CORN) > 0)
+            result = 1;
+            System.out.println("HAY>CORN");
+        if (Double.compare(HAY, UNKNOWN) > 0)
+            result = 1;
+            System.out.println("HAY>UNKNOWN");
+        if (Double.compare(CORN, UNKNOWN) > 0)
+            result = 1;
+            System.out.println("CORN>UNKNOWN");
+        return result;
+
     }
 
 
 
-        public double getFood1kgPrice() {
-            //  метод, который возвращает информацию о цене 1 кг еды.
-            // метод реализовать в виде switch по FoodKind со следующими значениями
-            // HAY : 20  // CORN: 50 // UNKNOWN: 0
-        //double getFood1kgPrice=FoodKind.toString();
-                switch (FoodKind) {
-                case HAY:
-                    //System.out.println("20");
-                    return 20;
-                case CORN:
-                    //System.out.println("50");
-                    return 50;
-                case UNKNOWN:
-                //System.out.println("0");
-                return 0;
-            }
-        return getFood1kgPrice();
-        }
-        public double getFoodPrice () {
-         // который возвращает информацию о цене еды для данного животного по формуле
-        //calculateFoodWeight() * getFood1kgPrice()
-        double getFoodPrice = calculateFoodWeight()*getFood1kgPrice();
-        return getFoodPrice;
+        public static void main (String[]args){
+            System.out.println(AnimalKind.ANIMAL);
+            System.out.println(UNKNOWN);
+           // boolean equals (Object)
 
         }
-
-    public int compareFoodPrice(Animal animal){
-        //который возвращает результаты сравнения цены еды для данного животного
-        // с ценой еды для другого животного, используя Double.compare;
-            Integer HAY = 20;
-            Integer CORN = 50;
-            Integer UNKNOWN = 0;
-            System.out.println(HAY.compareTo(CORN));
-            System.out.println(HAY.compareTo(UNKNOWN));
-            System.out.println(CORN.compareTo(UNKNOWN));
-            return FoodKind.compareTo(FoodKind);
-            }
-
 
 
 }
