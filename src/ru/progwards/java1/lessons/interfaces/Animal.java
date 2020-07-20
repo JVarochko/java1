@@ -89,7 +89,7 @@ public class Animal implements FoodCompare {
     }
     @Override
       public int compareFoodPrice(Animal animal) {
-        int result;
+        int result = 0;
         if (Double.compare(getFoodPrice(), getFoodPrice()) < 0) ;
         result = -1;
         if (Double.compare(getFoodPrice(), getFoodPrice()) > 0) ;
@@ -97,14 +97,17 @@ public class Animal implements FoodCompare {
         if (Double.compare(getFoodPrice(), getFoodPrice()) == 0) ;
          result = 0;
         return result;
-
-
     }
+
+
+
+
 
 
     public static void main (String[]args){
             System.out.println(AnimalKind.ANIMAL);
             System.out.println(UNKNOWN);
+            
             //System.out.println(getFood1kgPrice(double));
 
             //CompareFoodPrice  compareFoodPrice = CompareFoodPrice(result);
@@ -136,6 +139,8 @@ public class Animal implements FoodCompare {
            // public int compareFoodPrice(Animal animal)
 
            // return result;
+
+
         }
 
 
