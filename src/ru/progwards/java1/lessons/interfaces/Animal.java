@@ -44,8 +44,9 @@ public class Animal implements FoodCompare {
 
     //метод который рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела.
     public double calculateFoodWeight() {
-        double FoodWeight = (weight * FoodCoeff) / w;
-        return FoodWeight;
+//        double FoodWeight = (weight * FoodCoeff) / w;
+//        return FoodWeight;
+        return weight * getFoodCoeff();
     }
 
     //метод, который возвращает информацию о животном в формате: I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>
