@@ -18,25 +18,27 @@ public class Animal implements FoodCompare {
     }
     public FoodKind getFoodKind() { // метод, который возвращает вид еды UNKNOWN
         System.out.println(UNKNOWN);
-        return UNKNOWN;
+        return FoodKind.UNKNOWN;
     }
     public String toString() {//метод, который возвращает информацию о животном в формате: I am <AnimalKind>, eat <FoodKind>
         String str1 = "I am ";
         String str3 = ", eat ";
 
-        System.out.println(str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass());
-        return (str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass());
+        System.out.println(str1 + getKind() + str3 + getFoodKind());
+        return (str1 + getKind() + str3 + getFoodKind());
 
     }
+
+
     public double getWeight() {//метод, который возвращает вес животного
 
         return weight;
     }
 
     public double getFoodCoeff() {//возвращает коэффициент веса еды к весу тела животного 0.02
-        double w = 50;
-        double FoodCoeff = weight / w;
-        return FoodCoeff;
+//        double w = 50;
+//        double FoodCoeff = weight / w;
+        return 0.02;
 
     }
 
@@ -50,8 +52,8 @@ public class Animal implements FoodCompare {
     public String toStringFull() {
         String str1 = "I am ";
         String str3 = ", eat ";
-        System.out.println(str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
-        return (str1 + AnimalKind.class.getSuperclass() + str3 + FoodKind.class.getSuperclass() + calculateFoodWeight());
+        System.out.println(str1 + getKind() + str3 + getFoodKind() + "" + calculateFoodWeight());
+        return (str1 + getKind() + str3 + getFoodKind() + "" + calculateFoodWeight());
     }
 
     //______________________________________________________________________________________________
@@ -62,23 +64,19 @@ public class Animal implements FoodCompare {
         Animal that = (Animal) anObject;
         return Double.compare(that.getWeight(), this.getWeight()) == 0;
     }
-
+    //  метод, который возвращает информацию о цене 1 кг еды.
+    // метод реализовать в виде switch по FoodKind со следующими значениями
+    // HAY : 20  // CORN: 50 // UNKNOWN: 0
+    //double getFood1kgPrice=FoodKind.toString();
     public double getFood1kgPrice() {
-         double resultPrice = 0;
-        //  метод, который возвращает информацию о цене 1 кг еды.
-        // метод реализовать в виде switch по FoodKind со следующими значениями
-        // HAY : 20  // CORN: 50 // UNKNOWN: 0
-        //double getFood1kgPrice=FoodKind.toString();
-        switch (FoodKind) {
-            case HAY:resultPrice = 20;
-                return 20;
-            case CORN:resultPrice = 50;
-                return 50;
-            case UNKNOWN:resultPrice = 0;
-                return 0;
+
+        switch (getFoodKind()) {
+            case HAY: return 20D;
+            case CORN:return 50D;
+            case UNKNOWN:return 0;
         }
 
-         return resultPrice;
+         return 0D;
     }
 
     public double getFoodPrice() {
@@ -130,6 +128,7 @@ public class Animal implements FoodCompare {
         public static void main (String[]args){
             System.out.println(AnimalKind.ANIMAL);
             System.out.println(UNKNOWN);
+            //System.out.println(getFood1kgPrice(double));
 
             //CompareFoodPrice  compareFoodPrice = CompareFoodPrice(result);
             //System.out.println(compareFoodPrice(HAY, CORN));
@@ -150,8 +149,9 @@ public class Animal implements FoodCompare {
             //public boolean equals(Object anObject)
             //return Double.compare(that.getWeight(), this.getWeight()) == 0;
 
-           // public double getFood1kgPrice() {
-           // return getFoodPrice;
+            //public double getFood1kgPrice() {
+            //return getFoodPrice;
+
 
             //public double getFoodPrice()
             // который возвращает информацию о цене еды для данного животного по формуле
