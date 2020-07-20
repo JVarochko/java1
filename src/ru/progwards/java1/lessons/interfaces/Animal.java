@@ -87,46 +87,16 @@ public class Animal implements FoodCompare {
         return getFoodPrice;
 
     }
-    public int compareFoodPrice(Animal animal) {
-        //который возвращает результаты сравнения цены еды для данного животного
-        // с ценой еды для другого животного, используя Double.compare;
-        Integer HAY = 20;
-        Integer CORN = 50;
-        Integer UNKNOWN = 0;
-        int result = 0;
-        if (Double.compare(HAY, CORN) == 0)
-           result = 0;
-            System.out.println("HAY=CORN");
-        if (Double.compare(HAY, UNKNOWN) == 0)
-            result = 0;
-            System.out.println("HAY=UNKNOWN");
-        if (Double.compare(CORN, UNKNOWN) == 0)
-            result = 0;
-            System.out.println("CORN=UNKNOWN");
-        if (Double.compare(HAY, CORN) < 0)
-            result =-1;
-            System.out.println("HAY<CORN");
-        if (Double.compare(HAY, UNKNOWN) < 0)
-            result =-1;
-            System.out.println("HAY<UNKNOWN");
-        if (Double.compare(CORN, UNKNOWN) < 0)
-            result =-1;
-            System.out.println("CORN<UNKNOWN");
-        if (Double.compare(HAY, CORN) > 0)
-            result = 1;
-            System.out.println("HAY>CORN");
-        if (Double.compare(HAY, UNKNOWN) > 0)
-            result = 1;
-            System.out.println("HAY>UNKNOWN");
-        if (Double.compare(CORN, UNKNOWN) > 0)
-            result = 1;
-            System.out.println("CORN>UNKNOWN");
-        return result;
+    @Override
+      public int compareFoodPrice(Animal animal){
+      int compareFoodPrice = Double.compare(getFoodPrice(),getFoodPrice());
+       return compareFoodPrice;
+
 
     }
 
 
-        public static void main (String[]args){
+    public static void main (String[]args){
             System.out.println(AnimalKind.ANIMAL);
             System.out.println(UNKNOWN);
             //System.out.println(getFood1kgPrice(double));
