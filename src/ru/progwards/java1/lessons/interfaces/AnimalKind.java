@@ -5,5 +5,5 @@ public enum AnimalKind {
     ANIMAL,
     COW,
     HAMSTER,
-    DUCK;
+    DUCK
 }
