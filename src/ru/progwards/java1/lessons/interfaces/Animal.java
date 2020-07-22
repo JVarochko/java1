@@ -90,10 +90,10 @@ public class Animal implements FoodCompare {
     @Override
       public int compareFoodPrice(Animal animal) {
 
-        if (Double.compare(getFoodPrice(), getFoodPrice()) < 0) {
+        if (Double.compare(this.getFoodPrice(), animal.getFoodPrice()) < 0) {
             return -1;
         }
-        if (Double.compare(getFoodPrice(), getFoodPrice()) > 0) {
+        if (Double.compare(this.getFoodPrice(), animal.getFoodPrice()) > 0) {
             return 1;
         }
             return 0;
